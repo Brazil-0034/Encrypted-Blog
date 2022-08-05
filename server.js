@@ -23,7 +23,7 @@ app.get('/post', function(req, res) {
     var content = req.query.content;
     console.log(title);
     console.log(content);
-    res.send("Success!");
+    res.send("Success! <a href='/'>Back to home</a>");
 
     // load passkey from .env "PASSWORD"
     var passkey = process.env.PASSWORD;
