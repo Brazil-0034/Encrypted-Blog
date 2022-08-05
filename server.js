@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
-}).listen(3000);
+}).listen(80);
 
 app.get('/post', function(req, res) {
     // two url args: title and content
