@@ -21,13 +21,10 @@ app.get('/post', function(req, res) {
     // two url args: title and content
     var title = req.query.title;
     var content = req.query.content;
-    console.log(title);
-    console.log(content);
     res.send("Success! <a href='/'>Back to home</a>");
 
     // load passkey from .env "PASSWORD"
     var passkey = process.env.PASSWORD;
-    console.log(passkey);
 
     // save the title and content to a file called "posts.txt" as a JSON object
     var post = {
@@ -38,7 +35,6 @@ app.get('/post', function(req, res) {
     // append
     fs.appendFile('posts.txt', JSON.stringify(post) + '\n', function(err) {
         if (err) throw err;
-        console.log('Saved!');
     });
 });
 
@@ -61,10 +57,7 @@ app.get('/decrypt', function(req, res) {
         var passkey = req.query.passkey;
         var content = req.query.content;
 
-        console.log(passkey + " " + content);
-
         const decryptedContent = encrypt.decrypt(content, passkey);
-        console.log(decryptedContent);
         res.send(decryptedContent);
     }
 });
