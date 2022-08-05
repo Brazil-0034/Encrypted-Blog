@@ -9,6 +9,7 @@ const encrypt = require('encrypt-with-password');
 var express = require('express');
 var app = express();
 var fs = require('fs');
+require('dotenv').config()
 
 app.use(express.static(__dirname + '/public'));
 
@@ -24,7 +25,9 @@ app.get('/post', function(req, res) {
     console.log(content);
     res.send("Success!");
 
-    const passkey = "password";
+    // load passkey from .env "PASSWORD"
+    var passkey = process.env.PASSWORD;
+    console.log(passkey);
 
     // save the title and content to a file called "posts.txt" as a JSON object
     var post = {
