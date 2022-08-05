@@ -1,3 +1,8 @@
+/**
+ * This file is used to test a different encryption algorithm, one I never got to finishing.
+ * I don't really remember how it was supposed to work.
+ * It's just here for reference.
+ */
 // imports, essential
 var seeded = require('seedrandom');
 const encrypt = require('encrypt-with-password');

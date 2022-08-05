@@ -1,3 +1,9 @@
+/**
+ * This is the backend for our site.
+ * It's pretty simple, and there's tons of room for improvement and cleanup.
+ * Note that the encryption algorithm can produce different outputs based on random variation,
+ * even when using the same input parameters.
+ */
 // basic express server
 const encrypt = require('encrypt-with-password');
 var express = require('express');
@@ -58,6 +64,11 @@ app.get('/decrypt', function(req, res) {
         console.log(decryptedContent);
         res.send(decryptedContent);
     }
+});
+
+// serve anything in the static folder
+app.get('/static/*', function(req, res) {
+    res.sendFile(__dirname + '/static/' + req.params[0]);
 });
 
 console.log('Server running at http://localhost:3000/');

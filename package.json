@@ -1,0 +1,28 @@
+{
+  "name": "encrypted-blog",
+  "version": "1.0.0",
+  "description": "encrypted blog app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brazil-0034/Encrypted-Blog.git"
+  },
+  "keywords": [
+    "blog",
+    "diary"
+  ],
+  "author": "Brazil-0034",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Brazil-0034/Encrypted-Blog/issues"
+  },
+  "homepage": "https://github.com/Brazil-0034/Encrypted-Blog#readme",
+  "dependencies": {
+    "encrypt-with-password": "^1.0.0",
+    "express": "^4.18.1"
+  }
+}
